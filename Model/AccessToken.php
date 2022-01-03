@@ -31,21 +31,21 @@ class AccessToken extends OAuthAppModel {
  */
 	public $validate = array(
 		'oauth_token' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 			),
 			'isUnique' => array(
 				'rule' => array('isUnique'),
 			)
 		),
 		'client_id' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 			),
 		),
 		'user_id' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 			),
 		),
 		'expires' => array(
