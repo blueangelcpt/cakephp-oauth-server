@@ -1,14 +1,9 @@
-# This project is unmaintained, see https://github.com/uafrica/oauth-server as an alternative
-
-
-----
-
 # CakePHP OAuth2 Server Plugin
 
 This is a plugin for implementing an OAuth Server/Provider in CakePHP, built on quizlets [oauth2-php library][1]
 
 ## What's inside?
-* A lovely OAuth component that allows cakey access to the oauth library
+* A lovely OAuth component that allows CakePHP access to the OAuth library
 * The required models with super safe automatic beforeSave token hashing
 * AuthComponent'ish interface for action allow/deny's
 * Convenience functions for retrieving the current user and adding clients
@@ -48,12 +43,12 @@ $ cake Migrations.migration run all --plugin OAuth
 Then clone this repo into a "OAuth" folder in your Plugins folder:
 
 ```
-$ git clone git://github.com/thomseddon/cakephp-oauth-server.git Plugin/OAuth
+$ git clone git://github.com/blueangelcpt/cakephp-oauth-server.git Plugin/OAuth
 ```
 Or via submodule:
 
 ```
-$ git submodule add git://github.com/thomseddon/cakephp-oauth-server.git Plugin/OAuth
+$ git submodule add git://github.com/blueangelcpt/cakephp-oauth-server.git Plugin/OAuth
 ```
 
 ### Loading the Plugin
@@ -124,9 +119,9 @@ Array(
 )
 ```
 
-The method includes various schemes for generating client id's, [pick your favourite](https://github.com/thomseddon/cakephp-oauth-server/blob/master/Model/Client.php#L122).
+The method includes various schemes for generating client id's, [pick your favourite](https://github.com/blueangelcpt/cakephp-oauth-server/blob/master/Model/Client.php#L122).
 
-**NOTE:** This convenience method will generate a random client secret __and hash it__ for security before storage. Although it will pass back the actual raw client secret when you first add a new client, it is not possible to ever determine this from the hash stored in the database. So if the client forgets their secret, [a new one will have to be issued](https://github.com/thomseddon/cakephp-oauth-server/blob/master/Model/Client.php#L139).
+**NOTE:** This convenience method will generate a random client secret __and hash it__ for security before storage. Although it will pass back the actual raw client secret when you first add a new client, it is not possible to ever determine this from the hash stored in the database. So if the client forgets their secret, [a new one will have to be issued](https://github.com/blueangelcpt/cakephp-oauth-server/blob/master/Model/Client.php#L139).
 
 
 ### Included Endpoints
